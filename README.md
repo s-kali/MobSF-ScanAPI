@@ -10,3 +10,8 @@ This API will analyze uploaded file with MobSF
 - [ ] API func to send uploaded file to MobSF && send MobSF Json analys as response
 - [ ] Refactor API code
 - [ ] Dockerize
+
+
+```
+curl -F 'file=@/home/kali/Desktop/malware/example.apk' http://localhost:5000/file-upload 
+```
