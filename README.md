@@ -13,5 +13,5 @@ This API will analyze uploaded file with MobSF
 
 
 ```
-curl -F 'file=@/home/kali/Desktop/malware/example.apk' http://localhost:5000/file-upload 
+curl -F 'file=@filepath' http://localhost:5000/file-upload 
 ```
