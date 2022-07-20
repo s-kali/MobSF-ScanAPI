@@ -4,7 +4,7 @@ from app import app
 from flask import Flask, request, redirect, jsonify
 from werkzeug.utils import secure_filename
 
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+ALLOWED_EXTENSIONS = set(['apk', 'zip', 'ipa', 'appx'])
 
 def allowed_file(filename):
 	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -28,7 +28,7 @@ def upload_file():
 		resp.status_code = 201
 		return resp
 	else:
-		resp = jsonify({'message' : 'Allowed file types are txt, pdf, png, jpg, jpeg, gif'})
+		resp = jsonify({'message' : 'Allowed file types are apk, zip, ipa, appx'})
 		resp.status_code = 400
 		return resp
 
