@@ -43,6 +43,6 @@ def json_response(upload_response):
 	print(response.text)
 	return(response.text)
 
-resp_val = upload_file()
-scan_file(resp_val)
-json_response(resp_val)
+#resp_val = upload_file()
+#scan_file(resp_val)
+#json_response(resp_val)
