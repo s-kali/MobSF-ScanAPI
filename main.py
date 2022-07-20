@@ -25,8 +25,14 @@ def upload_file():
 	if file and allowed_file(file.filename):
 		filename = secure_filename(file.filename)
 		file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-		resp = jsonify({'message' : 'File successfully uploaded'})
-		resp.status_code = 201
+		#resp = jsonify({'message' : 'File successfully uploaded'})
+		#resp.status_code = 201
+		filefullpath = app.config['UPLOAD_FOLDER']+filename
+		print('filefullpath', filefullpath)
+		mobSFrequest.malware_path=filefullpath
+		mobSFresp_val=mobSFrequest.upload_file()
+		mobSFrequest.scan_file(mobSFresp_val)
+		resp=mobSFrequest.json_response(mobSFresp_val)
 		return resp
 	else:
 		resp = jsonify({'message' : 'Allowed file types are apk, zip, ipa, appx'})

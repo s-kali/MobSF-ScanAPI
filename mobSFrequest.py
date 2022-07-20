@@ -6,7 +6,7 @@ api_url = 'http://localhost:8000'
 api_key = '7dcd5dcc80ae5eab5a85b79bff81e775c9cb483c426da44d0476ef113c3bfb58'
 
 malware_name = 'example.apk'
-malware_path = '/home/kali/Desktop/malware/example.apk'
+malware_path = ''
 
 def upload_file():
 	multipart_data = MultipartEncoder(fields={'file': (
