@@ -3,7 +3,7 @@ import urllib.request
 from app import app
 from flask import Flask, request, redirect, jsonify
 from werkzeug.utils import secure_filename
-import mobSFrequest
+import mobSFrequest as mob
 
 ALLOWED_EXTENSIONS = set(['apk', 'zip', 'ipa', 'appx'])
 
@@ -28,11 +28,12 @@ def upload_file():
 		#resp = jsonify({'message' : 'File successfully uploaded'})
 		#resp.status_code = 201
 		filefullpath = app.config['UPLOAD_FOLDER']+filename
-		print('filefullpath', filefullpath)
-		mobSFrequest.malware_path=filefullpath
-		mobSFresp_val=mobSFrequest.upload_file()
-		mobSFrequest.scan_file(mobSFresp_val)
-		resp=mobSFrequest.json_response(mobSFresp_val)
+
+		mob.malware_path=filefullpath
+		mob.malware_name=filename
+		mob_resp_val=mob.upload_file()
+		mob.scan_file(mob_resp_val)
+		resp=mob.json_response(mob_resp_val)
 		return resp
 	else:
 		resp = jsonify({'message' : 'Allowed file types are apk, zip, ipa, appx'})

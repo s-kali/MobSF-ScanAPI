@@ -6,7 +6,7 @@ This API will analyze uploaded file with MobSF
 
 - [x] File upload
 - [x] Python funcs to communicate with MobSF
-  - [ ] Malware path and name values as script or function parameters 
+  - [x] Malware path and name values as script or function parameters 
 - [x] API func to send uploaded file to MobSF && send MobSF Json analys as response
 - [ ] Refactor API code
 - [ ] Dockerize
