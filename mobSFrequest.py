@@ -3,7 +3,7 @@ import requests
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 
 api_url = 'http://localhost:8000'
-api_key = '7dcd5dcc80ae5eab5a85b79bff81e775c9cb483c426da44d0476ef113c3bfb58'
+api_key = ''
 
 malware_name = 'example.apk'
 malware_path = ''
@@ -34,13 +34,11 @@ def scan_file(upload_response):
 		}
 
 	response = requests.post(api_url+'/api/v1/scan', data=rtext, headers=header)
-	print(response.text)
 
 def json_response(upload_response):
 	header = {'Authorization':api_key}
 	hash_val = {"hash": json.loads(upload_response)["hash"]}
 	response = requests.post(api_url+'/api/v1/report_json', data=hash_val, headers=header)
-	print(response.text)
 	return(response.text)
 
 #resp_val = upload_file()
