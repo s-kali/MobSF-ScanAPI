@@ -8,12 +8,14 @@ This API will analyze uploaded file with MobSF and return analysis result as JSO
 - [x] Python funcs to communicate with MobSF
   - [x] Malware path and name values as script or function parameters 
 - [x] API func to send uploaded file to MobSF && send MobSF Json analys as response
+- [x] Refactor file structure
 - [ ] Refactor API code
 - [ ] Dockerize
   - [ ] ?Define static MobSF API key as secret
   - [ ] Build API image
   - [ ] ?Build network for multi container structure
   - [ ] Build docker-compose and yml file
+    - [ ] Set MobSF API KEY as secret variable
 
 <sub>
 PS: ? - not sure about task

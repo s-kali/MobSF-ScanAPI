@@ -1,9 +1,14 @@
 import os
 import urllib.request
-from app import app
 from flask import Flask, request, redirect, jsonify
 from werkzeug.utils import secure_filename
-import mobSFrequest as mob
+from app import app
+
+import pathlib
+import sys
+sys.path.insert(0, app.config['PROJECT_FOLDER'])
+
+import lib.mobSFrequest as mob
 
 ALLOWED_EXTENSIONS = set(['apk', 'zip', 'ipa', 'appx'])
 
