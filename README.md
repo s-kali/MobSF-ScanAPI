@@ -11,7 +11,7 @@ This API will analyze uploaded file with MobSF
 - [ ] Refactor API code
 - [ ] Dockerize
 
-
+## You can send your file request using command below
 ```
-curl -F 'file=@filepath' http://localhost:5000/file-upload 
+curl -F 'file=@<filepath>' http://localhost:5000/file-upload 
 ```
