@@ -18,6 +18,7 @@ This API will analyze uploaded file with MobSF and return analysis result as JSO
 <sub>
 PS: ? - not sure about task
 </sub>
+
 ## You can send your file request using command below
 ```
 curl -F 'file=@<filepath>' http://localhost:5000/file-upload 
