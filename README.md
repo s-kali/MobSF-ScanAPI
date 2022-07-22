@@ -16,6 +16,7 @@ This API will analyze uploaded file with MobSF and return analysis result as JSO
   - [x] Build docker-compose and yml file
     - [ ] Set static MobSF API KEY as secret variable
     - [ ] !Change static network values in yml file (default values causes duplicate network issue)
+- [ ] Add docker commands from scratch to README.md
 
 <sub>
 PS: 
