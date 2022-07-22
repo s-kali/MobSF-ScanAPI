@@ -1,9 +1,14 @@
 import os
 import urllib.request
-from app import app
 from flask import Flask, request, redirect, jsonify
 from werkzeug.utils import secure_filename
-import mobSFrequest as mob
+from app import app
+
+import pathlib
+import sys
+sys.path.insert(0, app.config['PROJECT_FOLDER'])
+
+import lib.mobSFrequest as mob
 
 ALLOWED_EXTENSIONS = set(['apk', 'zip', 'ipa', 'appx'])
 
@@ -29,6 +34,7 @@ def upload_file():
 		#resp.status_code = 201
 		filefullpath = app.config['UPLOAD_FOLDER']+filename
 
+		mob.api_key=app.api_key
 		mob.malware_path=filefullpath
 		mob.malware_name=filename
 		mob_resp_val=mob.upload_file()
@@ -42,4 +48,4 @@ def upload_file():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=5000)

@@ -1,0 +1,4 @@
+Flask==2.0.1
+requests==2.27.1
+requests_toolbelt==0.9.1
+Werkzeug==2.0.2
