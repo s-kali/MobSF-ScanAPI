@@ -34,6 +34,7 @@ def upload_file():
 		#resp.status_code = 201
 		filefullpath = app.config['UPLOAD_FOLDER']+filename
 
+		mob.api_key=app.api_key
 		mob.malware_path=filefullpath
 		mob.malware_name=filename
 		mob_resp_val=mob.upload_file()
@@ -47,4 +48,4 @@ def upload_file():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=5000)

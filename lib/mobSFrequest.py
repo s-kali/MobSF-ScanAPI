@@ -2,7 +2,7 @@ import json
 import requests
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 
-api_url = 'http://localhost:8000'
+api_url = 'http://172.18.0.3:8000'
 api_key = ''
 
 malware_name = ''
