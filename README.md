@@ -15,7 +15,6 @@ This API will analyze uploaded file with MobSF and return analysis result as JSO
 - [x] Refactor file structure
 - [x] Dockerize
   - [x] Build API image
-  - [x] Build network for multi container structure
   - [x] Build docker-compose and yml file
     - [ ] ?Set static MobSF API KEY as secret variable
 
@@ -34,7 +33,7 @@ Move to project directory
 ```
 cd MobSF-ScanAPI
 ```
-Run docker containers using compose
+Run docker containers using compose (you can add --build tag)
 ```
 docker-compose -f docker-compose.dev.yml up
 ```
