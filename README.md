@@ -40,5 +40,5 @@ docker-compose -f docker-compose.dev.yml up
 
 ### You can send your file request using command below
 ```
-curl -F 'file=@<filepath>' http://172.18.0.2:5000/file-upload 
+curl -F 'file=@<filepath>' http://<API IP>:5000/file-upload 
 ```
